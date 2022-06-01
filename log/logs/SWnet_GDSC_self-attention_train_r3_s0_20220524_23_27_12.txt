@@ -1,0 +1,57 @@
+SWnet_GDSC_self-attention_train_20220524_23_27_12.csv 
+radius = 3,split case = 0
+train size = 159415,test size = 17713
+Model(
+  (embed_fingerprint): Embedding(7475, 50)
+  (W_gnn): ModuleList(
+    (0): Linear(in_features=50, out_features=50, bias=True)
+    (1): Linear(in_features=50, out_features=50, bias=True)
+    (2): Linear(in_features=50, out_features=50, bias=True)
+  )
+  (gene): Sequential(
+    (0): Conv1d(1, 20, kernel_size=(15,), stride=(2,))
+    (1): BatchNorm1d(20, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Conv1d(20, 20, kernel_size=(15,), stride=(2,))
+    (4): BatchNorm1d(20, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Conv1d(20, 10, kernel_size=(15,), stride=(2,))
+    (7): BatchNorm1d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+    (9): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+    (10): Linear(in_features=57, out_features=32, bias=True)
+    (11): ReLU()
+    (12): Dropout(p=0.1, inplace=False)
+  )
+  (merged): Sequential(
+    (0): Linear(in_features=370, out_features=300, bias=True)
+    (1): Tanh()
+    (2): Dropout(p=0.1, inplace=False)
+    (3): Conv1d(1, 10, kernel_size=(10,), stride=(2,))
+    (4): BatchNorm1d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): MaxPool1d(kernel_size=5, stride=5, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv1d(10, 5, kernel_size=(10,), stride=(2,))
+    (7): BatchNorm1d(5, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): MaxPool1d(kernel_size=5, stride=5, padding=0, dilation=1, ceil_mode=False)
+    (9): Dropout(p=0.1, inplace=False)
+  )
+  (out): Sequential(
+    (0): Linear(in_features=10, out_features=1, bias=True)
+  )
+)Epoch 0/199
+Train Loss: 3.9409 Test Loss: 1.8906
+Epoch 1/199
+Train Loss: 1.9656 Test Loss: 1.7253
+Epoch 2/199
+Train Loss: 1.8770 Test Loss: 1.6482
+Epoch 3/199
+Train Loss: 1.8341 Test Loss: 1.6083
+Epoch 4/199
+Train Loss: 1.7675 Test Loss: 1.5467
+Epoch 5/199
+Train Loss: 1.6817 Test Loss: 1.4773
+Epoch 6/199
+Train Loss: 1.6328 Test Loss: 1.5099
+Epoch 7/199
+Train Loss: 1.6028 Test Loss: 1.4351
+Epoch 8/199

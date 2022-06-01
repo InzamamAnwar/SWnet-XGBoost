@@ -104,3 +104,10 @@ If you find this code useful for your research, please use the following citatio
 ```
 Zuo, Z., Wang, P., Chen, X. et al. SWnet: a deep learning model for drug response prediction from cancer genomic signatures and compound chemical structures. BMC Bioinformatics 22, 434 (2021). https://doi.org/10.1186/s12859-021-04352-9
 ```
+
+> ## Installation instructions for Windows 
+---
+1. conda create -n swnet python=3.7
+2. conda install -c pytorch pytorch=1.3.0 torchvision
+3. pip install scikit-learn==0.22.1 scipy==1.4.1 tqdm numpy==1.17.3 pandas==1.0.1
+4. conda install -c conda-forge rdkit==2019.03.4
