@@ -75,7 +75,7 @@ space = {
 
 def objective(space: Dict[str, any], X_train=X_train, Y_train=Y_train,
               X_valid=X_valid, Y_valid=Y_valid) -> Dict[str, any]:
-    clf = XGBRegressor(n_estimators=space['n_estimators'], max_depth=int(space['max_depth']), eta=space['eta'],
+    clf = XGBRegressor(n_estimators=int(space['n_estimators']), max_depth=int(space['max_depth']), eta=space['eta'],
                        subsample=0.7, colsample_bytree=int(space['colsample_bytree']), objective='reg:squarederror',
                        tree_method='gpu_hist', gpu_id=0, predictor='cpu_predictor', random_state=42,
                        gamma=space['gamma'], reg_alpha=int(space['reg_alpha']), reg_lambda=space['reg_lambda'],
