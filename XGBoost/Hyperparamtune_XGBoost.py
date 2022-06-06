@@ -79,7 +79,7 @@ def objective(space: Dict[str, any], X_train=X_train, Y_train=Y_train,
                        subsample=0.7, colsample_bytree=int(space['colsample_bytree']), objective='reg:squarederror',
                        tree_method='gpu_hist', gpu_id=0, predictor='cpu_predictor', random_state=42,
                        gamma=space['gamma'], reg_alpha=int(space['reg_alpha']), reg_lambda=space['reg_lambda'],
-                       min_child_distance=int(space('min_child_weight')))
+                       min_child_distance=int(space['min_child_weight']))
 
     evaluation = [(X_train, Y_train), (X_valid, Y_valid)]
 
